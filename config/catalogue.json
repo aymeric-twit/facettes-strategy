@@ -32,26 +32,32 @@
         "sous_categories": {
             "robes evasées": {
                 "genres": [
-                    "femme",
-                    "homme"
+                    "femme"
                 ],
                 "facettes": {
-                    "type": [
-                        "valeur"
+                    "couleur": [
+                        "blanche",
+                        "noire",
+                        "rouge",
+                        "bleue",
+                        "verte"
                     ],
-                    "jaune": [
-                        "valeur",
-                        "qsdqsd"
+                    "matiere": [
+                        "lin",
+                        "coton",
+                        "soie",
+                        "polyester"
                     ],
-                    "rouge": [
-                        "valeur",
-                        "qsd"
+                    "style": [
+                        "boheme",
+                        "chic",
+                        "casual",
+                        "vintage"
                     ],
-                    "bleu": [
-                        "valeur"
-                    ],
-                    "verte": [
-                        "valeur"
+                    "occasion": [
+                        "mariage",
+                        "soiree",
+                        "quotidien"
                     ]
                 }
             }
