@@ -1,0 +1,17 @@
+{
+    "name": "facettes/analyseur-facettes",
+    "description": "Outil de qualification SEO des facettes e-commerce",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Facettes\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

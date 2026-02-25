@@ -1,0 +1,8 @@
+/vendor/
+/cache/*
+!/cache/.gitkeep
+/logs/*
+!/logs/.gitkeep
+/exports/*
+!/exports/.gitkeep
+.env

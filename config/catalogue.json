@@ -1,0 +1,85 @@
+{
+    "robes": {
+        "genres": [
+            "femme"
+        ],
+        "facettes": {
+            "couleur": [
+                "blanche",
+                "noire",
+                "rouge",
+                "bleue",
+                "verte"
+            ],
+            "matiere": [
+                "lin",
+                "coton",
+                "soie",
+                "polyester"
+            ],
+            "style": [
+                "boheme",
+                "chic",
+                "casual",
+                "vintage"
+            ],
+            "occasion": [
+                "mariage",
+                "soiree",
+                "quotidien"
+            ]
+        },
+        "sous_categories": {
+            "robes evasées": {
+                "genres": [
+                    "femme",
+                    "homme"
+                ],
+                "facettes": {
+                    "type": [
+                        "valeur"
+                    ],
+                    "jaune": [
+                        "valeur",
+                        "qsdqsd"
+                    ],
+                    "rouge": [
+                        "valeur",
+                        "qsd"
+                    ],
+                    "bleu": [
+                        "valeur"
+                    ],
+                    "verte": [
+                        "valeur"
+                    ]
+                }
+            }
+        }
+    },
+    "pantalons": {
+        "genres": [
+            "femme"
+        ],
+        "facettes": {
+            "couleur": [
+                "noir",
+                "bleu",
+                "beige",
+                "gris"
+            ],
+            "matiere": [
+                "jean",
+                "coton",
+                "lin",
+                "velours"
+            ],
+            "coupe": [
+                "slim",
+                "droit",
+                "large",
+                "cargo"
+            ]
+        }
+    }
+}
