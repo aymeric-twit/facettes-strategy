@@ -1,0 +1,15 @@
+{
+    "slug": "facettes",
+    "name": "Analyseur de Facettes",
+    "description": "Qualification SEO des facettes e-commerce (volumes, suggest, scoring)",
+    "version": "1.0.0",
+    "icon": "bi-funnel",
+    "entry_point": "public/index.php",
+    "sort_order": 60,
+    "quota_mode": "api_call",
+    "default_quota": 500,
+    "display_mode": "iframe",
+    "env_keys": ["SEMRUSH_API_KEY"],
+    "languages": [],
+    "routes": []
+}
