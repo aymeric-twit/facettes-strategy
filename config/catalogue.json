@@ -1,7 +1,9 @@
 {
     "robes": {
         "genres": [
-            "femme"
+            "femme",
+            "homme",
+            "enfant"
         ],
         "facettes": {
             "couleur": [
@@ -59,6 +61,27 @@
                         "soiree",
                         "quotidien"
                     ]
+                },
+                "sous_categories": {
+                    "robe longue evasée": {
+                        "genres": [
+                            "femme"
+                        ],
+                        "facettes": {
+                            "couleur": [
+                                "blanche",
+                                "noire",
+                                "rouge",
+                                "bleue",
+                                "verte"
+                            ],
+                            "occasion": [
+                                "mariage",
+                                "soiree",
+                                "quotidien"
+                            ]
+                        }
+                    }
                 }
             }
         }

@@ -10,6 +10,7 @@
     "default_quota": 500,
     "display_mode": "iframe",
     "env_keys": ["SEMRUSH_API_KEY"],
+    "api_doc_url": "https://developer.semrush.com/api/",
     "languages": [],
     "routes": []
 }
