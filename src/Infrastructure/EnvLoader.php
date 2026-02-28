@@ -53,7 +53,9 @@ final class EnvLoader
             }
 
             // Ne pas écraser les valeurs déjà propagées par la plateforme
-            if (!getenv($cle)) {
+            // (getenv retourne false si non défini, '' si défini mais vide)
+            $existante = getenv($cle);
+            if ($existante === false || $existante === '') {
                 $_ENV[$cle] = $valeur;
                 putenv("{$cle}={$valeur}");
             }
@@ -62,6 +64,17 @@ final class EnvLoader
 
     public static function obtenir(string $cle, string $defaut = ''): string
     {
-        return $_ENV[$cle] ?? getenv($cle) ?: $defaut;
+        // Priorité : getenv() (propagé par boot.php) > $_ENV > défaut
+        $valeurGetenv = getenv($cle);
+        if ($valeurGetenv !== false && $valeurGetenv !== '') {
+            return $valeurGetenv;
+        }
+
+        $valeurEnv = $_ENV[$cle] ?? '';
+        if ($valeurEnv !== '') {
+            return $valeurEnv;
+        }
+
+        return $defaut;
     }
 }
