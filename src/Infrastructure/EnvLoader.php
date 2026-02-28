@@ -52,8 +52,11 @@ final class EnvLoader
                 $valeur = substr($valeur, 1, -1);
             }
 
-            $_ENV[$cle] = $valeur;
-            putenv("{$cle}={$valeur}");
+            // Ne pas écraser les valeurs déjà propagées par la plateforme
+            if (!getenv($cle)) {
+                $_ENV[$cle] = $valeur;
+                putenv("{$cle}={$valeur}");
+            }
         }
     }
 
