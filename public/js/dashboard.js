@@ -344,7 +344,7 @@
             btnDecouvrir.innerHTML = '<span class="spinner"></span>Recherche...';
 
             try {
-                const response = await fetch('/api/decouvrir-facettes', {
+                const response = await fetch('api/decouvrir-facettes', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ categorie, genre }),
@@ -423,7 +423,7 @@
             progressFill.style.width = '30%';
             progressText.textContent = 'Analyse des facettes simples et combinaisons...';
 
-            const response = await fetch('/api/analyser', {
+            const response = await fetch('api/analyser', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ categorie, genre, facettes }),
@@ -469,7 +469,7 @@
             btnCharger.innerHTML = '<span class="spinner"></span>Chargement...';
 
             try {
-                const response = await fetch(`/api/resultats?categorie=${encodeURIComponent(categorie)}&genre=${encodeURIComponent(genre)}`);
+                const response = await fetch(`api/resultats?categorie=${encodeURIComponent(categorie)}&genre=${encodeURIComponent(genre)}`);
                 const data = await response.json();
 
                 if (!response.ok) {
@@ -500,7 +500,7 @@
             const genre = btn.dataset.genre;
 
             try {
-                const response = await fetch(`/api/resultats?categorie=${encodeURIComponent(categorie)}&genre=${encodeURIComponent(genre)}`);
+                const response = await fetch(`api/resultats?categorie=${encodeURIComponent(categorie)}&genre=${encodeURIComponent(genre)}`);
                 const data = await response.json();
 
                 if (!response.ok) throw new Error(data.erreur);
@@ -868,7 +868,7 @@
         conteneur.innerHTML = '<p style="color: #999; font-style: italic;"><span class="spinner"></span> Chargement...</p>';
 
         try {
-            const response = await fetch('/api/vue-ensemble');
+            const response = await fetch('api/vue-ensemble');
             const data = await response.json();
 
             if (!data.donnees || data.donnees.length === 0) {
@@ -905,7 +905,7 @@
     // === Configuration — Charger les seuils ===
     async function chargerConfiguration() {
         try {
-            const response = await fetch('/api/configuration');
+            const response = await fetch('api/configuration');
             const data = await response.json();
 
             if (data.donnees && data.donnees.seuils) {
@@ -963,7 +963,7 @@
             });
 
             try {
-                const response = await fetch('/api/configuration', {
+                const response = await fetch('api/configuration', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ seuils }),
@@ -995,7 +995,7 @@
             btnTestSemrush.innerHTML = '<span class="spinner"></span>Test...';
 
             try {
-                const response = await fetch('/api/test-semrush');
+                const response = await fetch('api/test-semrush');
                 const data = await response.json();
 
                 if (semrushStatut) {
@@ -1017,7 +1017,7 @@
     // === Cache ===
     async function chargerInfoCache() {
         try {
-            const response = await fetch('/api/cache/info');
+            const response = await fetch('api/cache/info');
             const data = await response.json();
             const el = document.getElementById('cache-taille');
             if (el && data.donnees) {
@@ -1038,7 +1038,7 @@
             const prefixe = document.getElementById('cache-prefixe')?.value || '';
 
             try {
-                const response = await fetch('/api/cache/purger', {
+                const response = await fetch('api/cache/purger', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ prefixe }),
@@ -1888,7 +1888,7 @@
             btnSauverCatalogue.innerHTML = '<span class="spinner"></span>Sauvegarde...';
 
             try {
-                const response = await fetch('/api/catalogue', {
+                const response = await fetch('api/catalogue', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ catalogue: catalogueData }),
@@ -1972,7 +1972,7 @@
 
     async function chargerSelections() {
         try {
-            const response = await fetch('/api/selections');
+            const response = await fetch('api/selections');
             const data = await response.json();
             if (data.donnees) {
                 selectionsData = data.donnees;
@@ -1992,7 +1992,7 @@
         }
 
         try {
-            const response = await fetch('/api/selections', {
+            const response = await fetch('api/selections', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ selections: selectionsData }),
